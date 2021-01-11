@@ -28,13 +28,8 @@ while game_is_on:
     time.sleep(0.1)
     snake.move()
 
-    #detect snace wdistense withh wall 
-    if snake.head.xcor() > 280 :
-        for x in snake.segments:
-            x.goto(x.xcor()-560 ,x.ycor()) 
-            screen.update()
-            time.sleep(0.1)
-            snake.move()
+    
+    snake.wall_wdistense()
         # if snake.segments[i].xcor() < -280 :
         #     snake.segments[i].xcor(snake.segments[i].xcor() + 560)
 

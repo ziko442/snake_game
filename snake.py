@@ -1,5 +1,7 @@
-from turtle import Turtle
+from turtle import Turtle, Screen
+import time
 
+screen = Screen()
 STARTING_POSITIONS = [(0, 0),(-20, 0),(-40, 0)]
 MOVE_DISTANCE = 10
 
@@ -61,6 +63,34 @@ class Snake:
             self.head.setheading(RIGHT)
 
 
+    def wall_wdistense(self):
+        #detect snace wdistense withh wall 
+        if self.head.xcor() > 280:
+            for seg_item in self.segments:
+                seg_item.goto(seg_item.xcor() - 560 ,seg_item.ycor()) 
+                screen.update()
+                time.sleep(0.1)
+                self.move()
+        if self.head.xcor() < -280:
+            for seg_item in self.segments:
+                seg_item.goto(seg_item.xcor() + 560 ,seg_item.ycor()) 
+                screen.update()
+                time.sleep(0.1)
+                self.move()
+
+        if self.head.ycor() > 280:
+            for seg_item in self.segments:
+                seg_item.goto(seg_item.xcor(), seg_item.ycor() - 560) 
+                screen.update()
+                time.sleep(0.1)
+                self.move()
+
+        if self.head.ycor() < -280:
+            for seg_item in self.segments:
+                seg_item.goto(seg_item.xcor(), seg_item.ycor() + 560) 
+                screen.update()
+                time.sleep(0.1)
+                self.move()
 
     
   
