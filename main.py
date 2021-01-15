@@ -43,13 +43,6 @@ while game_is_on:
     snake.move()
 
     snake.wall_distance(detect_collision)
-    # if snake.segments[i].xcor() < -280 :
-    #     snake.segments[i].xcor(snake.segments[i].xcor() + 560)
-
-    # if snake.segments[i].ycor() > 280 :
-    #     snake.segments[i].ycor(snake.segments[i].ycor() - 560)
-    # if snake.segments[i].ycor() < -280 :
-    #     snake.segments[i].ycor(snake.segments[i].ycor() + 560)
 
     # Detect collision with wall.
     # if snake.head.xcor() > 290 or snake.head.xcor() < -290 or snake.head.ycor() > 290 or snake.head.ycor() < -290:
