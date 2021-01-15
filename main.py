@@ -35,6 +35,7 @@ def detect_collision():
         if snake.head.distance(segment) < 9:
             scoreboard.reset()
             snake.reset()
+#
 
 
 while game_is_on:

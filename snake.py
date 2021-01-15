@@ -95,3 +95,4 @@ class Snake:
                 screen.update()
                 time.sleep(0.1)
                 self.move()
+#
